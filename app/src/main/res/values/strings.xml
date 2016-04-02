@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string-array name="recycler_conten">
+        <item>idisfkj</item>
+        <item>kkkkk</item>
+        <item>ddddd</item>
+        <item>aaaaa</item>
+        <item>eeeee</item>
+        <item>中国</item>
+        <item>美国</item>
+        <item>日本</item>
+        <item>俄罗斯</item>
+        <item>韩国</item>
+        <item>朝鲜</item>
+        <item>德国</item>
+    </string-array>
+
+    <string-array name="item">
+        <item>listView</item>
+        <item>gridView</item>
+        <item>staggeredGridView</item>
+        <item>animationListView</item>
+        <item>animationGridView</item>
+        <item>animationStaggerdGridView</item>
+        <item>headBottomView</item>
+
+    </string-array>
+</resources>
