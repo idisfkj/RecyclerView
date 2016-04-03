@@ -142,7 +142,7 @@ recyclerView.setItemAnimator(new DefaultItemAnimator());
 
 # 效果图
 
-![效果图](http://github.com/idisfkj/RecyclerView/raw/master/image/RecyclerView.gif)
+![效果图](https://github.com/idisfkj/RecyclerView/raw/master/image/RecyclerView.gif)
 
 # 结语
 
