@@ -2,6 +2,7 @@ package com.idisfkj.recyclerview.fragment;
 
 import android.app.Fragment;
 import android.app.LoaderManager;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -13,7 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.idisfkj.recyclerview.R;
+import com.idisfkj.recyclerview.StartActivity;
 import com.idisfkj.recyclerview.adapter.CursorAdapter;
+import com.idisfkj.recyclerview.adapter.OnItemTouchListener;
 import com.idisfkj.recyclerview.bean.ItemInfo;
 import com.idisfkj.recyclerview.dao.RecyclerDataHelper;
 
@@ -59,6 +62,15 @@ public class CursorFragment extends Fragment implements LoaderManager.LoaderCall
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mAdapter = new CursorAdapter(getActivity());
         recyclerView.setAdapter(mAdapter);
+        recyclerView.addOnItemTouchListener(new OnItemTouchListener(recyclerView) {
+            @Override
+            public void onItemClick(RecyclerView.ViewHolder vh) {
+                Intent intent = new Intent();
+                intent.putExtra("type", vh.getLayoutPosition());
+                intent.setClass(getActivity(), StartActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

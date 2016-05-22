@@ -2,7 +2,9 @@ package com.idisfkj.recyclerview.fragment;
 
 import android.os.Bundle;
 
+import com.idisfkj.recyclerview.App.App;
 import com.idisfkj.recyclerview.adapter.NormalRecyclerAdapter;
+import com.squareup.leakcanary.RefWatcher;
 
 import butterknife.ButterKnife;
 
@@ -36,5 +38,8 @@ public class NormalRecyclerView extends BaseFragment{
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+        RefWatcher refWatcher = App.getRefWatcher(getActivity());
+        refWatcher.watch(this);
+
     }
 }

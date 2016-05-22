@@ -14,7 +14,6 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by idisfkj on 16/3/30.
@@ -36,7 +35,7 @@ public class AnimationAdapter<T> extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mLayoutInflater.inflate(R.layout.item_text, parent, false);
-        return new ViewHolder(view, this);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -57,23 +56,10 @@ public class AnimationAdapter<T> extends RecyclerView.Adapter {
     public static class ViewHolder extends RecyclerView.ViewHolder {
         @Bind(R.id.item_tv)
         TextView itemTv;
-        private AnimationAdapter animationAdapter;
 
-        ViewHolder(View view, AnimationAdapter adapter) {
+        ViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
-            animationAdapter = adapter;
-        }
-
-        @OnClick(R.id.item_tv)
-        public void onClick() {
-            if (getLayoutPosition() != 1) {
-                animationAdapter.mListData.add("add"+getLayoutPosition());
-                animationAdapter.notifyItemInserted(getLayoutPosition());
-            } else {
-                animationAdapter.mListData.remove(getLayoutPosition());
-                animationAdapter.notifyItemRemoved(getLayoutPosition());
-            }
         }
     }
 }

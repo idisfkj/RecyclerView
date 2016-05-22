@@ -109,19 +109,21 @@ switch (type) {
 * notifyItemChanged(int position)
 * notifyItemRangeChanged(int positionStart,int itemCount)
 
-只要在数据改变时通过**adapter**调用就行：
+只要在数据改变时通过**adapter**通知就行：
 
 ```
- @OnClick(R.id.item_tv)
-        public void onClick() {
-            if (getLayoutPosition() != 1) {
-                animationAdapter.mListData.add("add"+getLayoutPosition());
-                animationAdapter.notifyItemInserted(getLayoutPosition());
-            } else {
-                animationAdapter.mListData.remove(getLayoutPosition());
-                animationAdapter.notifyItemRemoved(getLayoutPosition());
-            }
-        }
+ recyclerView.addOnItemTouchListener(new OnItemTouchListener(recyclerView) {
+             @Override
+             public void onItemClick(RecyclerView.ViewHolder vh) {
+                 if (vh.getLayoutPosition() != 1) {
+                     adapter.mListData.add("add" + vh.getLayoutPosition());
+                     adapter.notifyItemInserted(vh.getLayoutPosition());
+                 } else {
+                     adapter.mListData.remove(vh.getLayoutPosition());
+                     adapter.notifyItemRemoved(vh.getLayoutPosition());
+                 }
+             }
+         });
 ```
 
 使用**recyclerView**的**setItemAnimator()**可以设置动画：
