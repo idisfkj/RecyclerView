@@ -43,6 +43,11 @@ public class AnimationRecyclerView extends BaseFragment {
                     adapter.notifyItemRemoved(vh.getLayoutPosition());
                 }
             }
+
+            @Override
+            public void onItemLongPressClick(RecyclerView.ViewHolder vh) {
+
+            }
         });
     }
 }

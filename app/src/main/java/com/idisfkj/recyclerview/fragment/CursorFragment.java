@@ -70,6 +70,11 @@ public class CursorFragment extends Fragment implements LoaderManager.LoaderCall
                 intent.setClass(getActivity(), StartActivity.class);
                 startActivity(intent);
             }
+
+            @Override
+            public void onItemLongPressClick(RecyclerView.ViewHolder vh) {
+
+            }
         });
     }
 

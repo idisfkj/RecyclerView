@@ -146,6 +146,13 @@ recyclerView.setItemAnimator(new DefaultItemAnimator());
 
 ![效果图](https://github.com/idisfkj/RecyclerView/raw/master/image/RecyclerView.gif)
 
+![效果图](https://github.com/idisfkj/RecyclerView/raw/master/image/RecyclerView1.gif)
+
 # 结语
 
-跟多详细说明：http://idisfkj.github.io/2016/04/02/RecyclerView%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/
+跟多详解：
+[RecyclerView深入浅出](http://idisfkj.github.io/2016/04/02/RecyclerView%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/)
+
+[RecyclerView item点击你真的会么](http://idisfkj.github.io/2016/05/22/RecyclerView-item%E7%82%B9%E5%87%BB%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E4%B9%88/)
+
+[RecyclerView的拖动、滑动删除](http://idisfkj.github.io/2016/06/04/RecyclerView%E7%9A%84%E6%8B%96%E5%8A%A8%E3%80%81%E6%BB%91%E5%8A%A8%E5%88%A0%E9%99%A4/)
